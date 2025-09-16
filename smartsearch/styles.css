@@ -1,0 +1,113 @@
+/* Apple-inspired CSS for Streamlit App */
+
+
+
+/* Import both fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap');
+
+/* Global font setup */
+html, body, [data-testid="stAppViewContainer"] {
+    color: #333333;
+    background-color: #ffffff;
+}
+
+
+
+/* Hide Streamlit default UI elements */
+#MainMenu, footer, header {
+    visibility: hidden;
+}
+
+
+.st-key-main {
+    display: flex;
+    align-items: center;       /* vertical centering */
+    justify-content: center;   /* horizontal centering */
+    height: 100vh;             /* optional: full viewport height */
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 40px 80px 80px 80px;
+    text-align: center;
+    
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);                /* the key: blur background */
+    -webkit-backdrop-filter: blur(10px);        /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* thin transparent border */
+}
+
+
+/* Center buttons horizontally */
+.st-key-clear_button, 
+.st-key-add_all_button, 
+.st-key-reset_button,
+.st-key-save_keywords,
+.st-key-search_button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Save keywords Button styles */
+.st-key-save_keywords button {
+    background-color: #2e8b57;
+    color: #ffffff !important;
+    outline: none;
+    border: 2px solid #2e8b57;
+    transition: all 0.2s ease-in-out;
+}
+
+.st-key-save_keywords button:hover {
+    background-color: #ffffff;
+    border: 2px solid #2e8b57;
+    color: #2e8b57 !important;
+    outline: none;
+}
+
+/* Search Button container */
+.st-key-search_button p, .st-key-save_keywords p {
+    font-weight: 600;
+}
+
+/* Search Button styles */
+.st-key-search_button button {
+    background-color: #0056b3;
+    color: #ffffff;
+    width: 350px;
+    height: 60px;
+    outline: none;
+    border: 2px solid #0056b3;
+    transition: all 0.2s ease-in-out;
+}
+
+.st-key-search_button button:hover {
+    background-color: #ffffff;
+    color: #0056b3;
+    border: 2px solid #0056b3;
+}
+
+/* Disabled state for Search button */
+.st-key-search_button button:disabled {
+    background: #999;
+    color: #666;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+
+
+/* Metric */
+.custom-metric-box {
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(235, 235, 235, 0.6);
+}
+.metric-label {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.metric-value {
+    font-size: 32px;
+}
